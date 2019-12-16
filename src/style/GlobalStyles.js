@@ -22,14 +22,25 @@ const GlobalStyles = createGlobalStyle`
    html {
       font-family: Raleway;
       background-color: ${({ theme: { gray } }) => gray.s1};
-      height: 100%
+      height: 100%;
+      scroll-behavior: smooth;
    }
 
    body {
       color: ${({ theme: { black } }) => black};
-      min-height: 100%;
-      display: flex;
-      flex-direction: column
+      height: 100%;
+   }
+
+   #___gatsby {
+      height: 100%;
+   }
+
+   #gatsby-focus-wrapper {
+      height: 100%;
+   }
+
+   svg{
+      display: block;
    }
 
    /* =========================================*/
@@ -147,19 +158,22 @@ const GlobalStyles = createGlobalStyle`
    ul,
    ol,
    dl,
-   address {
+   address,
+   button
+    {
       line-height: ${({ theme }) => theme.lineHeight.s3};
       padding: 0;
    }
 
    button {
       background: none;
-      color: inherit;
+      color: ${({ theme: { black } }) => black};
       border: none;
       padding: 0;
-      font: inherit;
+      font-family: inherit;
       cursor: pointer;
       outline: inherit
+      ${flexUnit(2.5, 16, 17, "vw", "font-size")}
    }
 
    pre {

@@ -31,19 +31,22 @@ export function flexUnit(amount, min, max, unit = "vw", prop = "font-size") {
 export const OverFlowFix = styled.div`
   overflow: hidden;
   position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 // Container
 
 export const Container = styled.div`
-  margin: 0 2.5%;
+  margin: 0 5%;
 
   @media screen and (min-width: 768px) {
-    margin: 0 5%;
+    margin: 0 6.5%;
   }
 
   @media screen and (min-width: 1200px) {
-    margin: 0 7.5%;
+    margin: 0 8%;
   }
 `;
 
@@ -83,4 +86,33 @@ export const StyledUnderline = styled.span`
     background-color: ${({ theme: { primary } }) =>
       primary.s4.replace("1)", "0.3)")};
   }
+`;
+
+// button
+
+export const Button = styled.button`
+  background-color: ${({ theme: { primary } }) => primary.s4};
+  color: ${({ theme: { white } }) => white};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
+  padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s6}`};
+  display: inline-block;
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+  box-shadow: ${({ theme: { shadow } }) => shadow.small};
+
+  &:hover {
+    background-color: ${({ theme: { primary } }) => primary.s5};
+    box-shadow: ${({ theme: { doubleShadow } }) => doubleShadow.small};
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
+// Card
+
+export const Card = styled.div`
+  background-color: ${({ theme: { white } }) => white};
+  border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
+  box-shadow: ${({ theme: { shadow } }) => shadow.medium};
+  max-width: ${({ theme: { spacing } }) => spacing.s14};
+  height: ${({ theme: { spacing } }) => spacing.s14};
+  margin: 0 auto;
 `;

@@ -6,15 +6,17 @@ import { OverFlowFix } from "../../style/Mixins";
 import { Variables } from "../../style/themes";
 import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
+import IEWarning from "./IE/IEWarning";
 // =========================
 
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={Variables}>
+      <IEWarning />
       <OverFlowFix>
         <Nav />
         {children}
-        <Footer style={{ marginTop: `auto` }} />
+        <Footer />
       </OverFlowFix>
       <GlobalStyles />
     </ThemeProvider>

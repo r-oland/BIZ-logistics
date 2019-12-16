@@ -13,17 +13,25 @@ export const Variables = {
     s9: "hsla(0, 0%, 17%, 1)"
   },
   primary: {
-    s1: "hsla(185, 29%, 63%, 1)",
-    s2: "hsla(185, 29%, 56%, 1)",
-    s3: "hsla(186, 30%, 49%, 1)",
-    s4: "hsla(185, 40%, 42%, 1)",
-    s5: "hsla(185, 40%, 37%, 1)",
-    s6: "hsla(185, 40%, 32%, 1)",
-    s7: "hsla(184, 39%, 27%, 1)"
+    s1: "hsla(207, 13%, 45%, 1)",
+    s2: "hsla(208, 14%, 41%, 1)",
+    s3: "hsla(206, 17%, 37%, 1)",
+    s4: "hsla(208, 24%, 30%, 1)",
+    s5: "hsla(206, 24%, 26%, 1)",
+    s6: "hsla(206, 23%, 21%, 1)",
+    s7: "hsla(208, 24%, 19%, 1)"
   },
-  secondary: {},
-  borderRadius: "5px",
-  borderRadius2: "15px",
+  secondary: {
+    s1: "hsla(2, 64%, 71%, 1)",
+    s2: "hsla(2, 64%, 66%, 1)",
+    s3: "hsla(3, 57%, 60%, 1)",
+    s4: "hsla(2, 56%, 54%, 1)",
+    s5: "hsla(2, 49%, 51%, 1)",
+    s6: "hsla(2, 47%, 45%, 1)",
+    s7: "hsla(3, 48%, 38%, 1)"
+  },
+  borderRadius: "0px",
+  borderRadius2: "0px",
   fontWeight: {
     normal: "400",
     semiBold: "500",

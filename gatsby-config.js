@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: `New project`,
+    title: `Biz Logistics`,
     description: `undefined`,
     author: `Roland Branten`
     //siteUrl: ``,
@@ -32,11 +32,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `new`,
-        short_name: `new`,
+        name: `Biz Logistics`,
+        short_name: `BIZ`,
         start_url: `/`,
-        background_color: `#fbf4ea`,
-        theme_color: `#fbf4ea`,
+        background_color: `hsla(208, 24%, 30%, 1)`,
+        theme_color: `hsla(208, 24%, 30%, 1)`,
         display: `standalone`,
         icon: `icon/icon.png`
       }

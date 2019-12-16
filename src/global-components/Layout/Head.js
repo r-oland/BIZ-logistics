@@ -25,12 +25,7 @@ export default function Head({ title, description, keywords }) {
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <title>{`${siteTitle} | ${title}`}</title>
-      {/* <link
-            rel="stylesheet"
-            href=""
-         ></link> */}
-
-      <html lang="en" />
+      <html lang="nl" />
     </Helmet>
   );
 }
