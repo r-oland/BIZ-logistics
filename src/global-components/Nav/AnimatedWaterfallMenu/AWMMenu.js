@@ -1,24 +1,32 @@
 // Components==============
 import { Link } from "gatsby";
+import { Container } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../style/Mixins";
 // =========================
 
 const MenuWrapper = styled.div`
-  /* @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 950px) {
     display: none;
-  } */
-  background-color: ${({ theme: { primary } }) => primary.s4};
+  }
+  background-color: ${({ theme: { white } }) => white};
   color: ${({ theme: { white } }) => white};
   max-height: ${({ menuState }) => (menuState === "open" ? "60vh" : `0`)};
   visibility: ${({ menuState }) =>
     menuState === "open" ? "visible" : `hidden`};
   position: ${({ fixed }) => (fixed === true ? `fixed` : `block`)};
-  top: 70px;
+  top: 60px;
   right: 0;
-  z-index: 150;
+  z-index: 147;
   transition: 0.8s;
+  width: 100vw;
+  box-shadow: ${({ menuState, top, theme }) => {
+    if (menuState === "closed" && top === false) {
+      return "none";
+    } else {
+      return "0 3px 3px hsla(0, 0%, 0%, 0.1)";
+    }
+  }};
 
   ul {
     opacity: ${({ menuState }) => (menuState === "open" ? "1" : `0`)};
@@ -46,13 +54,13 @@ const MenuWrapper = styled.div`
   }
 `;
 
-export default function AWMMenu({ menuState, setMenuState, fixed }) {
+export default function AWMMenu({ menuState, setMenuState, top }) {
   function changeMenu() {
     menuState === "closed" ? setMenuState("open") : setMenuState("closed");
   }
 
   return (
-    <MenuWrapper menuState={menuState} fixed={fixed}>
+    <MenuWrapper menuState={menuState} top={top} fixed={true}>
       <Container>
         <ul>
           <li>

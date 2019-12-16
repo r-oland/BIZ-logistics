@@ -29,7 +29,7 @@ const MenuDropdownArrowSvg = styled(MenuDropdownArrowImp)`
   grid-row: 1;
   grid-column: 2/3;
   width: 10px;
-  margin-left: 9.5em;
+  margin-left: 4.5em;
 
   .svgColor {
     fill: ${({ theme, cardisvisible }) =>
@@ -53,8 +53,8 @@ const Card = styled.div`
   text-align: left;
 
   @media screen and (min-width: 600px) {
-    width: 175%;
-    left: -37.5%;
+    width: 300%;
+    left: -100%;
   }
 
   .dropdownItem {
@@ -131,21 +131,3 @@ export default function MenuCardDropdown3({ children, name }) {
     </Wrapper>
   );
 }
-
-/* <MenuCardDropdown3 name="Dropdown item 2">
-<div className="dropdownItem">
-  <SVG/>
-  <p>Title 1</p>
-  <div className="subDropdownText">Additional text</div>
-</div>
-<div className="dropdownItem">
-  <SVG/>
-  <p>Title 2</p>
-  <div className="subDropdownText">Additional text</div>
-</div>
-<div className="dropdownItem">
-  <SVG/>
-  <p>Title 3</p>
-  <div className="subDropdownText">Additional text</div>
-</div>
-</MenuCardDropdown3> */

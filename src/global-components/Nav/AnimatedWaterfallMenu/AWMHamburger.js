@@ -6,9 +6,9 @@ import Hamburger from "./Hamburger.inline.svg";
 // =========================
 
 const SvgWrapper = styled.div`
-  /* @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 950px) {
     display: none;
-  } */
+  }
 
   height: 25px;
   cursor: pointer;
@@ -29,7 +29,7 @@ const MenuSvg = styled(Hamburger)`
   transition: 0.5s;
 
   #menu {
-    fill: ${({ theme: { white } }) => white};
+    fill: ${({ theme: { primary } }) => primary.s7};
   }
 `;
 
@@ -72,14 +72,3 @@ export default function AWMHamburger({ menuState, setMenuState }) {
     </button>
   );
 }
-
-// INSERT IN NAVIGATION COMPONENT
-
-// const [menuState, setMenuState] = useState("closed");
-
-/* <AWMHamburger menuState={menuState} setMenuState={setMenuState} />
-<AWMMenu
-  menuState={menuState}
-  setMenuState={setMenuState}
-  fixed={fixed}
-/> */
