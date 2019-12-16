@@ -126,21 +126,27 @@ export default function Nav() {
               <div className="dropdownItem">
                 <img src={KoerierDienst} alt="Koerier dienst" />
                 <p>Koerierdienst</p>
-                <div className="subDropdownText">Additional text</div>
+                <div className="subDropdownText">
+                  Reguliere pakket verzending
+                </div>
               </div>
             </Link>
             <Link to="/spoedOpdrachten">
               <div className="dropdownItem">
                 <img src={SpoedOpdracht} alt="Spoed opdracht" />
                 <p>Spoed opdracht</p>
-                <div className="subDropdownText">Additional text</div>
+                <div className="subDropdownText">
+                  Pakket verzending met haast
+                </div>
               </div>
             </Link>
             <Link to="/opslag">
               <div className="dropdownItem">
                 <img src={Opslag} alt="Opslag" />
                 <p>Opslag</p>
-                <div className="subDropdownText">Additional text</div>
+                <div className="subDropdownText">
+                  Van diverseren soorten en maten
+                </div>
               </div>
             </Link>
           </MenuCardDropdown3>

@@ -37,7 +37,6 @@ export default function index({ data }) {
         description="Page description goes here"
         keywords="content"
       />
-      <div style={{ height: "200vh" }}></div>
     </Layout>
   );
 }

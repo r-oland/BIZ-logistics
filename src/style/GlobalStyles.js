@@ -23,7 +23,6 @@ const GlobalStyles = createGlobalStyle`
       font-family: Raleway;
       background-color: ${({ theme: { gray } }) => gray.s1};
       height: 100%;
-      scroll-behavior: smooth;
    }
 
    body {

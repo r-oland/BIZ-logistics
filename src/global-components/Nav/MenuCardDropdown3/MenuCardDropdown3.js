@@ -23,6 +23,7 @@ const Item = styled.div`
   color: ${({ theme, cardIsVisible }) =>
     cardIsVisible === "true" ? theme.primary.s4 : theme.gray.s7};
   transition: 0.2s;
+  cursor: default;
 `;
 
 const MenuDropdownArrowSvg = styled(MenuDropdownArrowImp)`
@@ -51,6 +52,7 @@ const Card = styled.div`
   width: 80vw;
   z-index: 100;
   text-align: left;
+  overflow: hidden;
 
   @media screen and (min-width: 600px) {
     width: 300%;

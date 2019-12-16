@@ -18,7 +18,7 @@ const MenuWrapper = styled.div`
   top: 60px;
   right: 0;
   z-index: 147;
-  transition: 0.8s;
+  transition: 0.5s;
   width: 100vw;
   box-shadow: ${({ menuState, top, theme }) => {
     if (menuState === "closed" && top === false) {
@@ -29,28 +29,23 @@ const MenuWrapper = styled.div`
   }};
 
   ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: ${({ theme: { spacing } }) => spacing.s7};
+    grid-column-gap: ${({ theme: { spacing } }) => spacing.s2};
+    align-items: center;
+    justify-items: center;
     opacity: ${({ menuState }) => (menuState === "open" ? "1" : `0`)};
-    transition: 0.8s;
-    margin: 0 auto;
+    transition: 0.4s;
+    margin: ${({ theme: { spacing } }) => `${spacing.s5} auto ${spacing.s2}`};
     padding-bottom: ${({ theme: { spacing } }) => spacing.s5};
     text-align: center;
   }
 
   li {
     cursor: pointer;
-    display: inline-block;
-    background-color: ${({ theme: { white } }) => white};
-    color: ${({ theme: { primary } }) => primary.s6};
-    padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s7}`};
-    margin: ${({ theme: { spacing } }) => `${spacing.s3} ${spacing.s4}`};
-    transition: 0.2s;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
-    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
 
-    &:hover {
-      background-color: ${({ theme: { primary } }) => primary.s6};
-      color: ${({ theme: { white } }) => white};
-    }
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   }
 `;
 
@@ -64,23 +59,33 @@ export default function AWMMenu({ menuState, setMenuState, top }) {
       <Container>
         <ul>
           <li>
-            <Link to="/" onClick={changeMenu}>
-              page 1
+            <Link to="/overOns" onClick={changeMenu}>
+              Over ons
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={changeMenu}>
-              page 2
+            <Link to="/#contact" onClick={changeMenu}>
+              Contact
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={changeMenu}>
-              page 3
+            <Link to="/koerierdienst" onClick={changeMenu}>
+              Koerierdienst
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={changeMenu}>
-              page 4
+            <Link to="/spoedOpdrachten" onClick={changeMenu}>
+              Spoed opdracht
+            </Link>
+          </li>
+          <li>
+            <Link to="/opslag" onClick={changeMenu}>
+              Opslag
+            </Link>
+          </li>
+          <li>
+            <Link to="/offerteAfspraak" onClick={changeMenu}>
+              Offerte / Afspraak
             </Link>
           </li>
         </ul>
