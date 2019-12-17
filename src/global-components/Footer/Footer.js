@@ -179,8 +179,9 @@ export default function Footer() {
           <a href={`mailto:${email}`}>
             <p>{email}</p>
           </a>
-
-          <FooterButton>Offerte / Afspraak</FooterButton>
+          <Link to="/offerteAfspraak">
+            <FooterButton>Offerte / Afspraak</FooterButton>
+          </Link>
         </Adres>
         <CopyRight>
           © Copyright - 2019 | Biz logistics | Alle rechten voorbehouden

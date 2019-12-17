@@ -73,18 +73,18 @@ export const L = styled.p`
 export const StyledUnderline = styled.span`
   cursor: pointer;
   border-bottom: 1px solid
-    ${({ theme: { primary } }) => primary.s4.replace("1)", "0.3)")};
-  box-shadow: 0px -4px 0px ${({ theme: { primary } }) =>
-      primary.s4.replace("1)", "0.3)")} inset;
+    ${({ theme: { secondary } }) => secondary.s4.replace("1)", "0.3)")};
+  box-shadow: 0px -4px 0px ${({ theme: { secondary } }) =>
+      secondary.s4.replace("1)", "0.3)")} inset;
   transition: 0.2s;
 
   &:hover {
     border-bottom: 1px solid
-      ${({ theme: { primary } }) => primary.s4.replace("1)", "0)")};
-    box-shadow: 0px -4px 0px ${({ theme: { primary } }) =>
-        primary.s4.replace("1)", "0)")} inset;
-    background-color: ${({ theme: { primary } }) =>
-      primary.s4.replace("1)", "0.3)")};
+      ${({ theme: { secondary } }) => secondary.s4.replace("1)", "0)")};
+    box-shadow: 0px -4px 0px ${({ theme: { secondary } }) =>
+        secondary.s4.replace("1)", "0)")} inset;
+    background-color: ${({ theme: { secondary } }) =>
+      secondary.s4.replace("1)", "0.3)")};
   }
 `;
 
@@ -112,7 +112,7 @@ export const Card = styled.div`
   background-color: ${({ theme: { white } }) => white};
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   box-shadow: ${({ theme: { shadow } }) => shadow.medium};
-  max-width: ${({ theme: { spacing } }) => spacing.s14};
+  max-width: ${({ theme: { spacing } }) => spacing.s17};
   height: ${({ theme: { spacing } }) => spacing.s14};
   margin: 0 auto;
 `;
