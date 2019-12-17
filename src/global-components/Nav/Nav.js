@@ -61,7 +61,7 @@ const Blur = styled.button`
   opacity: ${({ menuState }) => (menuState === "open" ? "1" : "0")};
   visibility: ${({ menuState }) =>
     menuState === "open" ? "visible" : "hidden"};
-  transition: 0.5;
+  transition: 0.5s;
 `;
 
 const Logo = styled.img`

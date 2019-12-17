@@ -20,7 +20,7 @@ const MenuWrapper = styled.div`
   z-index: 147;
   transition: 0.5s;
   width: 100vw;
-  box-shadow: ${({ menuState, top, theme }) => {
+  box-shadow: ${({ menuState, top }) => {
     if (menuState === "closed" && top === false) {
       return "none";
     } else {
@@ -29,23 +29,30 @@ const MenuWrapper = styled.div`
   }};
 
   ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: ${({ theme: { spacing } }) => spacing.s7};
-    grid-column-gap: ${({ theme: { spacing } }) => spacing.s2};
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
     opacity: ${({ menuState }) => (menuState === "open" ? "1" : `0`)};
     transition: 0.4s;
     margin: ${({ theme: { spacing } }) => `${spacing.s5} auto ${spacing.s2}`};
     padding-bottom: ${({ theme: { spacing } }) => spacing.s5};
-    text-align: center;
   }
 
   li {
     cursor: pointer;
-
+    display: inline-block;
+    padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s2}`};
+    margin: ${({ theme: { spacing } }) => `${spacing.s2} auto`};
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+    border-bottom: 3px solid
+      ${({ theme: { primary } }) => primary.s1.replace("1)", "0.3)")};
+    box-shadow: 0px -5px 0px ${({ theme: { primary } }) =>
+        primary.s1.replace("1)", "0.1)")} inset;
+    transition: 0.2s;
+
+    &:hover {
+      box-shadow: 0px -35px 0px ${({ theme: { primary } }) =>
+          primary.s4.replace("1)", "0.5)")} inset;
+    }
   }
 `;
 
