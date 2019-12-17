@@ -19,6 +19,11 @@ const Card = styled.div`
   }
 `;
 
+const Scroll = styled.div`
+  position: absolute;
+  top: -120px;
+`;
+
 const ContactContainer = styled(Container)`
   h2 {
     text-align: center;
@@ -114,7 +119,8 @@ export default function Contact({
   contactBericht
 }) {
   return (
-    <Container>
+    <Container style={{ position: "relative" }}>
+      <Scroll id="contact" />
       <Card>
         <ContactContainer>
           <LeftSide>

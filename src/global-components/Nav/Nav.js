@@ -50,6 +50,20 @@ const FlexContainer = styled(Container)`
   height: ${({ theme: { spacing } }) => spacing.s9};
 `;
 
+const Blur = styled.button`
+  position: fixed;
+  top: ${({ theme: { spacing } }) => spacing.s9};
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 140;
+  background-color: ${({ theme: { gray } }) => gray.s9.replace("1)", "0.9)")};
+  opacity: ${({ menuState }) => (menuState === "open" ? "1" : "0")};
+  visibility: ${({ menuState }) =>
+    menuState === "open" ? "visible" : "hidden"};
+  transition: 0.5;
+`;
+
 const Logo = styled.img`
   width: 160px;
 `;
@@ -106,6 +120,12 @@ export default function Nav() {
         <Link to="/">
           <Logo src={BLogo} alt="Biz-logistics-logo" />
         </Link>
+        <Blur
+          menuState={menuState}
+          onClick={() => {
+            setMenuState("closed");
+          }}
+        />
         <AWMHamburger menuState={menuState} setMenuState={setMenuState} />
         <AWMMenu
           menuState={menuState}
