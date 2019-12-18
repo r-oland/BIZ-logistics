@@ -1,7 +1,8 @@
 // Components==============
 import { L } from "mixins";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { FormContext } from "../../global-components/Layout/Layout";
 import Form1 from "./Form1";
 import Form2 from "./Form2";
 // =========================
@@ -136,9 +137,7 @@ const HideForm2 = styled.div`
 // add succes.js page to pages
 
 export default function DoubleForm({ OfferteTekst, AfspraakTekst }) {
-  const F1 = "Offerte";
-  const F2 = "Afspraak";
-  const [selectedForm, setSelectedForm] = useState(F1);
+  const { F1, F2, selectedForm, setSelectedForm } = useContext(FormContext);
 
   const ConditionalRender = () => {
     if (selectedForm === F1) {

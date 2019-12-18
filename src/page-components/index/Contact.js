@@ -1,7 +1,8 @@
 // Components==============
 import { Link } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { FormContext } from "../../global-components/Layout/Layout";
 import GoogleMap from "../../single-components/Map";
 import { Button, Container, StyledUnderline } from "../../style/Mixins";
 // =========================
@@ -118,6 +119,8 @@ export default function Contact({
   email,
   contactBericht
 }) {
+  const { F1, F2, setF1, setF2 } = useContext(FormContext);
+
   return (
     <Container style={{ position: "relative" }}>
       <Scroll id="contact" />
@@ -141,11 +144,11 @@ export default function Contact({
             </Adres>
             <ContactBericht>{contactBericht}</ContactBericht>
             <Flex>
-              <Link to="/offerteAfspraak">
-                <Button>Offerte</Button>
+              <Link to="/offerteAfspraak" onClick={setF1}>
+                <Button>{F1}</Button>
               </Link>
-              <Link to="/offerteAfspraak">
-                <Button>Afspraak</Button>
+              <Link to="/offerteAfspraak" onClick={setF2}>
+                <Button>{F2}</Button>
               </Link>
             </Flex>
           </LeftSide>

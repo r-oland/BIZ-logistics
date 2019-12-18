@@ -1,9 +1,10 @@
 // Components==============
 import Logo from "assets/Biz-logistics-logo-3.svg";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Button, Container, Xs } from "../../style/Mixins";
+import { FormContext } from "../Layout/Layout";
 // =========================
 
 const FooterFixed = styled.footer`
@@ -115,6 +116,8 @@ const CopyRight = styled(Xs)`
 `;
 
 export default function Footer() {
+  const { F1, F2, setF1, setF2 } = useContext(FormContext);
+
   const data = useStaticQuery(graphql`
     query footer {
       contentfulHome {
@@ -147,11 +150,11 @@ export default function Footer() {
             <Link to="/#contact">
               <li>Contact</li>
             </Link>
-            <Link to="/offerteAfspraak">
-              <li>Offerte</li>
+            <Link to="/offerteAfspraak" onClick={setF1}>
+              <li>{F1}</li>
             </Link>
-            <Link to="/offerteAfspraak">
-              <li>Afspraak</li>
+            <Link to="/offerteAfspraak" onClick={setF2}>
+              <li>{F2}</li>
             </Link>
             <Link to="/vacature">
               <li>Vacature</li>
