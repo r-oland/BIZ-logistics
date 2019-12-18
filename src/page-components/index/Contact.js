@@ -21,7 +21,7 @@ const Card = styled.div`
 
 const Scroll = styled.div`
   position: absolute;
-  top: -120px;
+  top: -7vw;
 `;
 
 const ContactContainer = styled(Container)`

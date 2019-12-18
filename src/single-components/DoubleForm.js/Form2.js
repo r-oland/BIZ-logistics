@@ -2,7 +2,7 @@
 import { Xs } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import { SimpleButton } from "../SimpleButton";
+import { Button } from "../../style/Mixins";
 // =========================
 
 const Form = styled.form`
@@ -68,7 +68,7 @@ const Bericht = styled.div`
   }
 `;
 
-const FormButton = styled(SimpleButton)`
+const FormButton = styled(Button)`
   max-width: 170px;
   margin: ${({ theme: { spacing } }) => spacing.s4} auto 0;
 
@@ -83,7 +83,7 @@ export default function Form1({ F2 }) {
       id={F2}
       name={F2}
       method="post"
-      action="/success/"
+      action="/succes"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >

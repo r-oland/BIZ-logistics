@@ -3,13 +3,13 @@ import { graphql } from "gatsby";
 import React from "react";
 import Head from "../global-components/Layout/Head";
 import Layout from "../global-components/Layout/Layout";
+import Dienst from "../page-components/Dienst";
 // =========================
 
 export default function opslag({ data }) {
-  // const naam = data.contentfulOpslag.naam;
-  // const dienstPaginaTekst =
-  //   data.contentfulOpslag.dienstPaginaTekst.dienstPaginaTekst;
-  // const illustratie = data.contentfulOpslag.illustratie.file.url;
+  const naam = data.contentfulOpslag.naam;
+  const dienstPaginaTekst = data.contentfulOpslag.dienstPagina.json;
+  const illustratie = data.contentfulOpslag.illustratie.file.url;
 
   return (
     <Layout>
@@ -17,6 +17,11 @@ export default function opslag({ data }) {
         title="Opslag"
         description="Page description goes here"
         keywords="content"
+      />
+      <Dienst
+        naam={naam}
+        dienstPaginaTekst={dienstPaginaTekst}
+        illustratie={illustratie}
       />
     </Layout>
   );
@@ -27,8 +32,8 @@ export const query = graphql`
     # opslag
     contentfulOpslag {
       naam
-      dienstPaginaTekst {
-        dienstPaginaTekst
+      dienstPagina {
+        json
       }
       illustratie {
         file {

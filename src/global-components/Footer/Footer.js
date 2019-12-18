@@ -153,6 +153,9 @@ export default function Footer() {
             <Link to="/offerteAfspraak">
               <li>Afspraak</li>
             </Link>
+            <Link to="/vacature">
+              <li>Vacature</li>
+            </Link>
           </ul>
         </Pages>
 

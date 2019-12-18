@@ -7,7 +7,7 @@ import Form2 from "./Form2";
 // =========================
 
 const FormAndSelect = styled.div`
-  margin: ${({ theme: { spacing } }) => spacing.s10} auto;
+  margin: ${({ theme: { spacing } }) => spacing.s8} auto;
   @media screen and (min-width: 900px) {
     max-width: 800px;
   }
@@ -135,7 +135,7 @@ const HideForm2 = styled.div`
 
 // add succes.js page to pages
 
-export default function DoubleForm() {
+export default function DoubleForm({ OfferteTekst, AfspraakTekst }) {
   const F1 = "Offerte";
   const F2 = "Afspraak";
   const [selectedForm, setSelectedForm] = useState(F1);
@@ -146,11 +146,7 @@ export default function DoubleForm() {
         <div>
           <FormText>
             <L className="CTA">Vraag een offerte aan</L>
-            <p className="message">
-              Wilt u graag een offerte ontvangen? Geen probleem! Vul de gegevens
-              hieronder zo volledig mogelijk in om een zo accuraat mogelijke
-              offerte te kunnen ontvangen.
-            </p>
+            <p className="message">{OfferteTekst}</p>
           </FormText>
           <Form1 F1={F1} />
           <HideForm2>
@@ -163,11 +159,7 @@ export default function DoubleForm() {
         <div>
           <FormText>
             <L className="CTA">Maak een afspraak</L>
-            <p className="message">
-              Beschikt uw situatie over speciale omstandigheden of wilt u graag
-              exact weten wat de mogelijkheden zijn? Maak dan een telefonische
-              of een fysieke afspraak.
-            </p>
+            <p className="message">{AfspraakTekst}</p>
           </FormText>
           <Form2 F2={F2} />
         </div>

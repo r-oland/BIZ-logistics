@@ -3,11 +3,12 @@ import { graphql } from "gatsby";
 import React from "react";
 import Head from "../global-components/Layout/Head";
 import Layout from "../global-components/Layout/Layout";
+import Vacature from "../page-components/Vacature";
 // =========================
 
 export default function vacature({ data }) {
-  // const VacatureT =
-  //   data.contentfulOfferteAfspraakVacature.vacatureTekst.vacatureTekst;
+  const VacatureT =
+    data.contentfulOfferteAfspraakVacature.vacatureTekst.vacatureTekst;
 
   return (
     <Layout>
@@ -16,6 +17,7 @@ export default function vacature({ data }) {
         description="Page description goes here"
         keywords="content"
       />
+      <Vacature tekst={VacatureT} />
     </Layout>
   );
 }

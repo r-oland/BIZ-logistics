@@ -1,10 +1,8 @@
 // Components==============
-import { Xs } from "mixins";
+import { Button, Xs } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { SimpleButton } from "../SimpleButton";
 import BijlagenImp from "./Bijlagen.inline.svg";
-
 // =========================
 
 const FormCard = styled.div`
@@ -150,8 +148,8 @@ const Bericht = styled.div`
   }
 `;
 
-const FormButton = styled(SimpleButton)`
-  max-width: 170px;
+const FormButton = styled(Button)`
+  max-width: 180px;
   margin: ${({ theme: { spacing } }) => spacing.s4} auto 0;
 
   @media screen and (min-width: 900px) {
@@ -159,9 +157,14 @@ const FormButton = styled(SimpleButton)`
   }
 `;
 
+const Tekst = styled.p`
+  margin-bottom: ${({ theme: { spacing } }) => spacing.s7};
+  text-align: center;
+`;
+
 // add succes.js page to pages
 
-export default function JobForm() {
+export default function JobForm({ tekst }) {
   const formName = "newForm";
   const initialMessage = "Voeg bestand toe";
   const toBigMessage = "TE GROOT (max 500kb)";
@@ -192,6 +195,7 @@ export default function JobForm() {
 
   return (
     <FormCard>
+      <Tekst>{tekst}</Tekst>
       <Form
         id={formName}
         name={formName}
@@ -224,7 +228,6 @@ export default function JobForm() {
           <Label>Functie</Label>
           <select name="Functie" required>
             <option>Koerierdienst</option>
-            <option>Logistiek medewerker</option>
           </select>
         </Functie>
         <GeboorteDatum className="formElement" required>

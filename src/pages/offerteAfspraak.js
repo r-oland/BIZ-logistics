@@ -3,13 +3,14 @@ import { graphql } from "gatsby";
 import React from "react";
 import Head from "../global-components/Layout/Head";
 import Layout from "../global-components/Layout/Layout";
+import OfferteAfspraak from "../page-components/OfferteAfspraak";
 // =========================
 
 export default function offerteAfspraak({ data }) {
-  // const OfferteT =
-  //   data.contentfulOfferteAfspraakVacature.offerteTekst.offerteTekst;
-  // const AfspraakT =
-  //   data.contentfulOfferteAfspraakVacature.afspraakTekst.afspraakTekst;
+  const OfferteT =
+    data.contentfulOfferteAfspraakVacature.offerteTekst.offerteTekst;
+  const AfspraakT =
+    data.contentfulOfferteAfspraakVacature.afspraakTekst.afspraakTekst;
 
   return (
     <Layout>
@@ -18,6 +19,7 @@ export default function offerteAfspraak({ data }) {
         description="Page description goes here"
         keywords="content"
       />
+      <OfferteAfspraak OfferteTekst={OfferteT} AfspraakTekst={AfspraakT} />
     </Layout>
   );
 }

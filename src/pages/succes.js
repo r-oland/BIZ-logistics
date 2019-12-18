@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import Head from "../global-components/Layout/Head";
 import Layout from "../global-components/Layout/Layout";
+import { L } from "../style/Mixins";
 // =========================
 
 const Container404 = styled(Container)`
@@ -11,7 +12,12 @@ const Container404 = styled(Container)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 50vh;
+  text-align: center;
+
+  h2 {
+    margin-bottom: ${({ theme: { spacing } }) => spacing.s4};
+  }
 `;
 
 export default function succes() {
@@ -23,7 +29,8 @@ export default function succes() {
         keywords="404, unavailable, not found"
       />
       <Container404>
-        <h2>Succes</h2>
+        <h2>We hebben uw bericht ontvangen!</h2>
+        <L>We proberen u zo snel mogelijk een reactie tegemoet te sturen</L>
       </Container404>
     </Layout>
   );
