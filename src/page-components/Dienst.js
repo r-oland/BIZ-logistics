@@ -61,6 +61,7 @@ const BgWrapper1 = styled.div`
   @media screen and (min-width: 900px) {
     background: initial;
     padding: 0;
+    max-height: 250px;
   }
 `;
 
