@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   siteMetadata: {
     title: `Biz Logistics`,
-    description: `undefined`,
+    description: `Van het opslaan van goederen tot een spoedige levering bij uw klanten. Besteed uw logistieke taken uit zodat u zich kan focussen op de kernactiviteiten binnen uw bedrijf.`,
     author: `Roland Branten`
     //siteUrl: ``,
   },
