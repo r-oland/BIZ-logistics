@@ -14,9 +14,9 @@ export default function koerierDienst({ data }) {
   return (
     <Layout>
       <Head
-        title="Koerier dienst"
-        description="Page description goes here"
-        keywords="content"
+        title="Koerierdienst"
+        description="Pakket verzenden? Zoek niet verder. We zorgen door middel van tijdvakken en track and trace opties dat uw klant altijd op de hoogte is van de bestelling."
+        keywords="koerierdienst, son, pakket verzenden"
       />
       <Dienst
         naam={naam}

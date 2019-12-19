@@ -18,9 +18,9 @@ export default function notFound() {
   return (
     <Layout>
       <Head
-        title="404 NOT FOUND"
+        title="404 NIET BESCHIKBAAR"
         description="Deze pagina is niet beschikbaar"
-        keywords="404, unavailable, not found"
+        keywords="404, niet  beschikbaar, not found"
       />
       <Container404>
         <h2>Deze pagina is niet beschikbaar</h2>

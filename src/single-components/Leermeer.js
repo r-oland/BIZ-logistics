@@ -30,7 +30,7 @@ export default function Leermeer() {
         betekenen? Maak dan een afspraak, vraag een factuur aan of neem direct
         contact op.
       </span>
-      <Link to="/offerteAfspraak">
+      <Link to="/offerte-afspraak">
         <Button>contact</Button>
       </Link>
     </Wrapper>

@@ -14,8 +14,8 @@ export default function vacature({ data }) {
     <Layout>
       <Head
         title="Vacature"
-        description="Page description goes here"
-        keywords="content"
+        description="Werken bij Biz Logistics."
+        keywords="vacature, biz logistics, werken bij, koerierdienst"
       />
       <Vacature tekst={VacatureT} />
     </Layout>

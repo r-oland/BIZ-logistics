@@ -15,8 +15,8 @@ export default function spoedOpdrachten({ data }) {
     <Layout>
       <Head
         title="Spoed opdrachten"
-        description="Page description goes here"
-        keywords="content"
+        description="Heeft u goederen die vandaag nog geleverd of verzonden dienen te worden? Kijk niet verder! Uw pakket dezelfde dag nog bezorgd, het is hier mogelijk."
+        keywords="spoed opdrachten, Eindhoven, Son"
       />
       <Dienst
         naam={naam}

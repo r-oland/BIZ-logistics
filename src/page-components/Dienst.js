@@ -3,7 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import React from "react";
 import styled from "styled-components";
 import Leermeer from "../single-components/Leermeer";
-import { Container } from "../style/Mixins";
+import { Container, flexUnit } from "../style/Mixins";
 // =========================
 
 const Wrapper = styled.div`
@@ -14,7 +14,8 @@ const Wrapper = styled.div`
     padding-bottom: 0;
   }
 
-  h2 {
+  h1 {
+    ${flexUnit(3, 24, 34, "vw", "font-size")}
     margin-bottom: ${({ theme: { spacing } }) => spacing.s6};
     text-align: center;
 
@@ -86,7 +87,7 @@ export default function Dienst({ naam, dienstPaginaTekst, illustratie }) {
       <div>
         <BgWrapper2>
           <Container>
-            <h2>{naam}</h2>
+            <h1>{naam}</h1>
           </Container>
           <BgWrapper1>
             <FlexContainer>

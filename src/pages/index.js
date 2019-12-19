@@ -37,8 +37,8 @@ export default function index({ data }) {
     <Layout>
       <Head
         title="Home"
-        description="Page description goes here"
-        keywords="content"
+        description="Van het opslaan van goederen tot een spoedige levering bij uw klanten. Besteed uw logistieke taken uit zodat u zich kan focussen op de kernactiviteiten binnen uw bedrijf."
+        keywords="Koerierdienst, Son, spoed opdracht, Ekkersrijt "
       />
       <Hero
         welkomBericht={welkomBericht}

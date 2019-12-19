@@ -135,7 +135,7 @@ export default function Nav() {
         />
 
         <MenuItems menuState={menuState}>
-          <Link to="/overOns">
+          <Link to="/over-ons">
             <li>Over ons</li>
           </Link>
           <Link to="/#contact">
@@ -144,16 +144,16 @@ export default function Nav() {
           <MenuCardDropdown3 name="Diensten">
             <Link to="/koerierdienst">
               <div className="dropdownItem">
-                <img src={KoerierDienst} alt="Koerier dienst" />
+                <img src={KoerierDienst} alt="Koerier-dienst" />
                 <p>Koerierdienst</p>
                 <div className="subDropdownText">
                   Reguliere pakket verzending
                 </div>
               </div>
             </Link>
-            <Link to="/spoedOpdrachten">
+            <Link to="/spoed-opdrachten">
               <div className="dropdownItem">
-                <img src={SpoedOpdracht} alt="Spoed opdracht" />
+                <img src={SpoedOpdracht} alt="Spoed-opdracht" />
                 <p>Spoed opdracht</p>
                 <div className="subDropdownText">
                   Pakket verzending met haast
@@ -171,7 +171,7 @@ export default function Nav() {
             </Link>
           </MenuCardDropdown3>
           <li>
-            <Link to="/offerteAfspraak">
+            <Link to="/offerte-afspraak">
               <Button>Offerte / Afspraak</Button>
             </Link>
           </li>

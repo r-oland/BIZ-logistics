@@ -137,23 +137,23 @@ export default function Footer() {
   return (
     <FooterFixed>
       <FooterContainer>
-        <LogoSVG src={Logo} alt="Logo" />
+        <LogoSVG src={Logo} alt="Biz-Logistics-logo" />
         <Pages>
           <p className="bedrijf">Bedrijf</p>
           <ul>
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to="/overOns">
+            <Link to="/over-ons">
               <li>Over ons</li>
             </Link>
             <Link to="/#contact">
               <li>Contact</li>
             </Link>
-            <Link to="/offerteAfspraak" onClick={setF1}>
+            <Link to="/offerte-afspraak" onClick={setF1}>
               <li>{F1}</li>
             </Link>
-            <Link to="/offerteAfspraak" onClick={setF2}>
+            <Link to="/offerte-afspraak" onClick={setF2}>
               <li>{F2}</li>
             </Link>
             <Link to="/vacature">
@@ -168,7 +168,7 @@ export default function Footer() {
             <Link to="/koerierdienst">
               <li>Koerierdienst</li>
             </Link>
-            <Link to="/spoedOpdrachten">
+            <Link to="/spoed-opdrachten">
               <li>spoed opdracht</li>
             </Link>
             <Link to="/opslag">
@@ -185,7 +185,7 @@ export default function Footer() {
           <a href={`mailto:${email}`}>
             <p>{email}</p>
           </a>
-          <Link to="/offerteAfspraak">
+          <Link to="/offerte-afspraak">
             <FooterButton>Offerte / Afspraak</FooterButton>
           </Link>
         </Adres>

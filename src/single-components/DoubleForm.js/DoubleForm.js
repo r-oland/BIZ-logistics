@@ -3,6 +3,7 @@ import { L } from "mixins";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { FormContext } from "../../global-components/Layout/Layout";
+import { flexUnit } from "../../style/Mixins";
 import Form1 from "./Form1";
 import Form2 from "./Form2";
 // =========================
@@ -122,6 +123,7 @@ const FormText = styled.div`
 
   .CTA {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
+    ${flexUnit(2.5, 18, 19, "vw", "font-size")}
   }
 
   .message {
@@ -144,7 +146,7 @@ export default function DoubleForm({ OfferteTekst, AfspraakTekst }) {
       return (
         <div>
           <FormText>
-            <L className="CTA">Vraag een offerte aan</L>
+            <h2 className="CTA">Vraag een offerte aan</h2>
             <p className="message">{OfferteTekst}</p>
           </FormText>
           <Form1 F1={F1} />
@@ -157,7 +159,7 @@ export default function DoubleForm({ OfferteTekst, AfspraakTekst }) {
       return (
         <div>
           <FormText>
-            <L className="CTA">Maak een afspraak</L>
+            <h2 className="CTA">Maak een afspraak</h2>
             <p className="message">{AfspraakTekst}</p>
           </FormText>
           <Form2 F2={F2} />

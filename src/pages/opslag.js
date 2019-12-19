@@ -15,8 +15,8 @@ export default function opslag({ data }) {
     <Layout>
       <Head
         title="Opslag"
-        description="Page description goes here"
-        keywords="content"
+        description="Heeft u waardevolle goederen die in een opslag geplaatst moet worden? In ons magazijn in Son kunt u er zeker van zijn dat uw goederen op korte of lange termijn veilig opgeborgen staan."
+        keywords="opslag, son, ekkersrijt"
       />
       <Dienst
         naam={naam}

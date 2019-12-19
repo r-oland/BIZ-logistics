@@ -16,8 +16,8 @@ export default function overOns({ data }) {
     <Layout>
       <Head
         title="Over ons"
-        description="Page description goes here"
-        keywords="content"
+        description="Biz Logistics neemt het logistieke werk voordelig voor u uit handen. Van het opslaan van goederen tot een spoedige levering bij uw klanten"
+        keywords="Biz Logistics, ekkersrijt, son"
       />
       <OverOns
         tekstvak1={tekstvak1}

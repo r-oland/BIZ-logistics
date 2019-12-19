@@ -94,9 +94,13 @@ export default function Hero({
         <h1>{welkomBericht}</h1>
         <div style={{ position: "relative" }}>
           <L>{welkomToevoeging}</L>
-          <img src={welkomAfbeeldingMobiel} alt="Biz-hero-mobile" id="mobile" />
+          <img
+            src={welkomAfbeeldingMobiel}
+            alt="Biz-logistics-hero"
+            id="mobile"
+          />
         </div>
-        <img src={welkomAfbeelding} alt="Biz-hero" id="desktop" />
+        <img src={welkomAfbeelding} alt="Biz-logistics-mobile" id="desktop" />
       </Container>
     </HeroWrapper>
   );

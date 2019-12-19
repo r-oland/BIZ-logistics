@@ -180,7 +180,7 @@ export default function HomeDIensten({
         <img src={SIllustratie} alt="spoed-opdracht" id="illustratie1" />
         <p id="tekst1">{STekst}</p>
 
-        <Button as={Link} to="/spoedOpdrachten" id="button1">
+        <Button as={Link} to="/spoed-opdrachten" id="button1">
           Lees meer
         </Button>
       </Dienst>

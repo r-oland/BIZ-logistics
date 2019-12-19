@@ -144,10 +144,10 @@ export default function Contact({
             </Adres>
             <ContactBericht>{contactBericht}</ContactBericht>
             <Flex>
-              <Link to="/offerteAfspraak" onClick={setF1}>
+              <Link to="/offerte-afspraak" onClick={setF1}>
                 <Button>{F1}</Button>
               </Link>
-              <Link to="/offerteAfspraak" onClick={setF2}>
+              <Link to="/offerte-afspraak" onClick={setF2}>
                 <Button>{F2}</Button>
               </Link>
             </Flex>

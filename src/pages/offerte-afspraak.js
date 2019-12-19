@@ -16,8 +16,8 @@ export default function offerteAfspraak({ data }) {
     <Layout>
       <Head
         title="Offerte/afspraak"
-        description="Page description goes here"
-        keywords="content"
+        description="Wij staan u graag te woord voor alle Logistieke vragen, van opslag tot transport. Vraag direct een offerte aan of maak eerst een afspraak om alle mogelijkheden te bespreken"
+        keywords="offerte, afspraak, Biz Logistics"
       />
       <OfferteAfspraak OfferteTekst={OfferteT} AfspraakTekst={AfspraakT} />
     </Layout>

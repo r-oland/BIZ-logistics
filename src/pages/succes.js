@@ -25,8 +25,8 @@ export default function succes() {
     <Layout>
       <Head
         title="Succes"
-        description="Deze pagina is niet beschikbaar"
-        keywords="404, unavailable, not found"
+        description="Formulier is verzonden"
+        keywords="Biz Logistics, succes,"
       />
       <Container404>
         <h2>We hebben uw bericht ontvangen!</h2>
