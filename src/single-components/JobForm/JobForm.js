@@ -165,7 +165,7 @@ const Tekst = styled.p`
 // add succes.js page to pages
 
 export default function JobForm({ tekst }) {
-  const formName = "newForm";
+  const formName = "Sollicitatie";
   const initialMessage = "Voeg bestand toe";
   const toBigMessage = "TE GROOT (max 500kb)";
   const noFileMessage = "Geen bestand";

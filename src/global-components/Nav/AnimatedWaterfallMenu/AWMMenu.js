@@ -66,16 +66,6 @@ export default function AWMMenu({ menuState, setMenuState, top }) {
       <Container>
         <ul>
           <li>
-            <Link to="/over-ons" onClick={changeMenu}>
-              Over ons
-            </Link>
-          </li>
-          <li>
-            <Link to="/#contact" onClick={changeMenu}>
-              Contact
-            </Link>
-          </li>
-          <li>
             <Link to="/koerierdienst" onClick={changeMenu}>
               Koerierdienst
             </Link>
@@ -91,8 +81,18 @@ export default function AWMMenu({ menuState, setMenuState, top }) {
             </Link>
           </li>
           <li>
+            <Link to="/over-ons" onClick={changeMenu}>
+              Over ons
+            </Link>
+          </li>
+          <li>
             <Link to="/offerte-afspraak" onClick={changeMenu}>
               Offerte / Afspraak
+            </Link>
+          </li>
+          <li>
+            <Link to="/#contact" onClick={changeMenu}>
+              Contact
             </Link>
           </li>
         </ul>

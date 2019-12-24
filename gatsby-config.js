@@ -5,11 +5,11 @@ module.exports = {
   siteMetadata: {
     title: `Biz Logistics`,
     description: `Van het opslaan van goederen tot een spoedige levering bij uw klanten. Besteed uw logistieke taken uit zodat u zich kan focussen op de kernactiviteiten binnen uw bedrijf.`,
-    author: `Roland Branten`
-    //siteUrl: ``,
+    author: `Roland Branten`,
+    siteUrl: `https://www.bizlogistics.nl/`
   },
   plugins: [
-    // `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -34,7 +34,7 @@ module.exports = {
       options: {
         name: `Biz Logistics`,
         short_name: `BIZ`,
-        start_url: `/`,
+        start_url: `https://www.bizlogistics.nl/`,
         background_color: `hsla(208, 24%, 30%, 1)`,
         theme_color: `hsla(208, 24%, 30%, 1)`,
         display: `standalone`,
@@ -57,12 +57,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-154982271-1"
+      }
     }
-    // {
-    //    resolve: `gatsby-plugin-google-analytics`,
-    //    options: {
-    //       trackingId: "XX-XXXXXXXX-X"
-    //    }
-    // }
   ]
 };
