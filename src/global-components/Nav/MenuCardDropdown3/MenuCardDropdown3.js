@@ -5,7 +5,7 @@ import MenuDropdownArrowImp from "./MenuDropdownArrow.inline.svg";
 // =========================
 
 const Wrapper = styled.div`
-  margin-left: ${({ theme: { spacing } }) => spacing.s8};
+  transform: translateX(20px);
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   position: relative;
 `;
