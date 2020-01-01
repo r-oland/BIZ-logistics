@@ -2,9 +2,9 @@
 import Divider from "assets/Divider.svg";
 import { Link } from "gatsby";
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { Button, Container } from "../../style/Mixins";
-
 // =========================
 
 const DienstContainer = styled(Container)`
@@ -21,6 +21,21 @@ const DienstContainer = styled(Container)`
 
   @media screen and (min-width: 1200px) {
     padding-top: 0;
+  }
+
+  #dienst1 {
+    opacity: ${({ inView1 }) => (inView1 === true ? 1 : 0)};
+    transition: 0.4s;
+  }
+
+  #dienst2 {
+    opacity: ${({ inView2 }) => (inView2 === true ? 1 : 0)};
+    transition: 0.4s;
+  }
+
+  #dienst3 {
+    opacity: ${({ inView3 }) => (inView3 === true ? 1 : 0)};
+    transition: 0.4s;
   }
 `;
 
@@ -172,10 +187,14 @@ export default function HomeDIensten({
   STekst,
   SIllustratie
 }) {
+  const [ref1, inView1] = useInView({ threshold: 0.4, triggerOnce: true });
+  const [ref2, inView2] = useInView({ threshold: 0.4, triggerOnce: true });
+  const [ref3, inView3] = useInView({ threshold: 0.4, triggerOnce: true });
+
   return (
-    <DienstContainer>
+    <DienstContainer inView1={inView1} inView2={inView2} inView3={inView3}>
       <h2>Onze diensten</h2>
-      <Dienst>
+      <Dienst ref={ref1} id="dienst1">
         <h3 id="title1">{SNaam}</h3>
         <img src={SIllustratie} alt="spoed-opdracht" id="illustratie1" />
         <p id="tekst1">{STekst}</p>
@@ -185,7 +204,7 @@ export default function HomeDIensten({
         </Button>
       </Dienst>
 
-      <Dienst style={{ position: "relative" }}>
+      <Dienst ref={ref2} style={{ position: "relative" }} id="dienst2">
         <DividerSVG src={Divider} alt="Divider" />
         <h3 id="title2">{KNaam}</h3>
         <img src={KIllustratie} alt="koerier-dienst" id="illustratie2" />
@@ -195,7 +214,7 @@ export default function HomeDIensten({
           Lees meer
         </Button>
       </Dienst>
-      <Dienst>
+      <Dienst ref={ref3} id="dienst3">
         <h3 id="title3">{ONaam}</h3>
         <img src={OIllustratie} alt="opslag" id="illustratie3" />
         <p id="tekst3">{OTekst}</p>
