@@ -187,9 +187,9 @@ export default function HomeDIensten({
   STekst,
   SIllustratie
 }) {
-  const [ref1, inView1] = useInView({ threshold: 0.4, triggerOnce: true });
-  const [ref2, inView2] = useInView({ threshold: 0.4, triggerOnce: true });
-  const [ref3, inView3] = useInView({ threshold: 0.4, triggerOnce: true });
+  const [ref1, inView1] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [ref2, inView2] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [ref3, inView3] = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
     <DienstContainer inView1={inView1} inView2={inView2} inView3={inView3}>
