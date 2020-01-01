@@ -200,7 +200,7 @@ export default function JobForm({ tekst }) {
         id={formName}
         name={formName}
         method="post"
-        action="/success/"
+        action="/succes/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
