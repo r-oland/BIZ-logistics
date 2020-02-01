@@ -7,6 +7,7 @@ import { Variables } from "../../style/themes";
 import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
 import IEWarning from "./IE/IEWarning";
+
 // =========================
 
 export const FormContext = React.createContext();
