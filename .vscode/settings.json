@@ -4,7 +4,7 @@
     "icon": true,
     "node_modules": true,
     "public": true,
-    ".env": true,
+    // ".env": true,
     ".gitignore": true,
     "desktop.ini": true,
     "gatsby-browser.js": true,
