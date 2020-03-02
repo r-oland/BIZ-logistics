@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: 900px) {
     padding-bottom: 0;
+    margin-top: ${({ theme: { spacing } }) => spacing.s11};
   }
 
   h1 {
@@ -21,7 +22,7 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 900px) {
       text-align: left;
-      margin-bottom: ${({ theme: { spacing } }) => spacing.s3};
+      margin-bottom: ${({ theme: { spacing } }) => spacing.s6};
     }
   }
 
@@ -36,33 +37,23 @@ const Wrapper = styled.div`
   }
 
   img {
-    padding-top: ${({ theme: { spacing } }) => spacing.s5};
+    padding-top: ${({ theme: { spacing } }) => spacing.s8};
+    padding-bottom: ${({ theme: { spacing } }) => spacing.s8};
 
     @media screen and (min-width: 900px) {
       min-width: 400px;
       max-width: 500px;
       margin-left: ${({ theme: { spacing } }) => spacing.s8};
-      transform: translateY(-20px);
+      transform: translateY(-40px);
+      padding: 0;
     }
   }
 `;
 
 const Tekst = styled.div`
   @media screen and (min-width: 900px) {
-    max-width: 800px;
+    max-width: 750px;
     padding-right: ${({ theme: { spacing } }) => spacing.s8};
-  }
-`;
-
-const BgWrapper1 = styled.div`
-  background-color: ${({ theme: { primary } }) =>
-    primary.s1.replace("1)", "0.05)")};
-  padding: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s10}`};
-
-  @media screen and (min-width: 900px) {
-    background: initial;
-    padding: 0;
-    max-height: 250px;
   }
 `;
 
@@ -70,33 +61,51 @@ const FlexContainer = styled(Container)`
   @media screen and (min-width: 900px) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: ${({ theme: { spacing } }) => spacing.s8};
+  }
+`;
+
+const BgWrapper1 = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 40vh;
+  left: 0;
+  top: 55vh;
+  background-color: ${({ theme: { primary } }) =>
+    primary.s1.replace("1)", "0.05)")};
+
+  @media screen and (min-width: 900px) {
+    display: none;
   }
 `;
 
 const BgWrapper2 = styled.div`
+  display: none;
+
   @media screen and (min-width: 900px) {
+    display: block;
     background-color: ${({ theme: { primary } }) =>
       primary.s1.replace("1)", "0.05)")};
-    padding: ${({ theme: { spacing } }) => `${spacing.s10} 0 ${spacing.s10}`};
+    position: absolute;
+    width: 100vw;
+    height: 45vh;
+    left: 0;
+    top: 25vh;
   }
 `;
 
 export default function Dienst({ naam, dienstPaginaTekst, illustratie }) {
   return (
     <Wrapper>
-      <div>
-        <BgWrapper2>
-          <Container>
-            <h1>{naam}</h1>
-          </Container>
-          <BgWrapper1>
-            <FlexContainer>
-              <Tekst>{documentToReactComponents(dienstPaginaTekst)}</Tekst>
-              <img src={illustratie} alt={naam} />
-            </FlexContainer>
-          </BgWrapper1>
-        </BgWrapper2>
-      </div>
+      <BgWrapper1 />
+      <BgWrapper2 />
+      <Container>
+        <h1>{naam}</h1>
+      </Container>
+      <FlexContainer>
+        <Tekst>{documentToReactComponents(dienstPaginaTekst)}</Tekst>
+        <img src={illustratie} alt={naam} />
+      </FlexContainer>
       <Leermeer />
     </Wrapper>
   );
