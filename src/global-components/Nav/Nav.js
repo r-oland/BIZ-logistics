@@ -65,7 +65,7 @@ const Blur = styled.button`
 `;
 
 const Logo = styled.img`
-  width: 160px;
+  width: 190px;
 `;
 
 const MenuItems = styled.ul`
